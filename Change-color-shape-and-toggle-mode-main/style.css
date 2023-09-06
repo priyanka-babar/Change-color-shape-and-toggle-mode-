@@ -1,0 +1,220 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/* Heading */
+#heading {
+  text-align: center;
+}
+
+/* toggle key */
+.container {
+  width: 80px;
+  height: 40px;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 30vw;
+}
+
+#check {
+  display: none;
+}
+
+.button {
+  background-color: rgb(70, 70, 70);
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.button i {
+  position: absolute;
+  top: 2vh;
+  left: 1vw;
+  transition: 0.2s;
+}
+
+.button::before {
+  position: absolute;
+  content: "";
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  margin: 5px;
+  left: -0.2vw;;
+  transition: 0.2s;
+}
+
+input:checked + .button {
+  background-color: #4a4949;
+}
+
+input:checked + .button::before {
+  transform: translateX(40px);
+}
+
+input:checked + .button i {
+  transform: translateX(40px);
+}
+
+/* Color and shape */
+#color {
+  /* background-color: white; */
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 35%;
+  transition: all ease 900ms;
+}
+
+.rectangle {
+  height: 150px;
+  width: 150px;
+  background-color: white;
+  margin: auto;
+  position: relative;
+  top: 75px;
+  transition: all ease 900ms;
+}
+
+.parallelogram {
+  width: 150px;
+  height: 150px;
+  transform: skew(20deg);
+  background: white;
+  margin: 0 auto;
+  position: relative;
+  top: 75px;
+  transition: all ease 900ms;
+}
+
+.circle {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: white;
+  margin: auto;
+  position: relative;
+  top: 75px;
+  transition: all ease 900ms;
+}
+
+.triangleUp {
+  height: 0px;
+  width: 0px;
+  background-color: transparent;
+  position: relative;
+  top: 60px;
+  margin: 0 auto;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-bottom: 150px solid white;
+  transition: all ease 900ms;
+}
+
+.triangleLeft {
+  height: 0px;
+  width: 0px;
+  background-color: transparent;
+  position: relative;
+  top: 75px;
+  right: 10px;
+  margin: 0 auto;
+  border-top: 75px solid transparent;
+  border-right: 150px solid white;
+  border-bottom: 75px solid transparent;
+  transition: all ease 900ms;
+}
+
+/* buttons */
+
+#buttonSection {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#btn_changeColor,
+#btn_changeShape,
+#btn_changeBoth {
+  display: inline-block;
+  margin: 1vw;
+}
+
+.threeButton {
+  height: 40px;
+  width: 150px;
+  position: relative;
+  margin-top: 20px;
+  transition: all ease 600ms;
+}
+
+.threeButton:hover {
+  box-shadow: 0px 0px 15px 10px gray;
+}
+
+/* GitHub Link Repository */
+#gitrepolink a {
+  color: rgb(255, 0, 200);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#gitrepolink a:hover {
+  color: rgb(255, 0, 200);
+  background-color: transparent;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+
+  #color {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    position: relative;
+    margin-left: 12%;
+    transition: all ease 900ms;
+  }
+
+  #buttonSection div {
+    display: block;
+  }
+
+  .threeButton {
+    height: 30px;
+    width: 150px;
+    position: relative;
+    margin-top: 15px;
+    transition: all ease 600ms;
+  }
+
+  .button::before {
+    position: absolute;
+    content: "";
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    margin: 5px;
+    left: -0.2vw;;
+    transition: 0.2s;
+  }
+  
+
+}
